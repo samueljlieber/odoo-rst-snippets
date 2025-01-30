@@ -1,0 +1,20 @@
+{
+  "name": "odoo-rst-snippets",
+  "displayName": "odoo-rst-snippets",
+  "description": "",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.96.0"
+  },
+  "categories": [
+    "Snippets"
+  ],
+  "contributes": {
+    "snippets": [
+      {
+        "language": "restructuredtext",
+        "path": "./snippets/odoo-rst-snippets.code-snippets"
+      }
+    ]
+  }
+}

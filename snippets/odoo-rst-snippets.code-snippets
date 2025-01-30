@@ -1,0 +1,484 @@
+{
+	// == Odoo User Docs restructuredText snippets ==
+
+	// == HEADINGS ==
+
+	"h1 === ===": {
+		"scope": "restructuredtext",
+		"prefix": "h1 heading",
+		"body": [
+			"===",
+			"${TM_SELECTED_TEXT:$1}",
+			"===",
+			"$0",
+		],
+		"description": "Heading level 1: There should be only one h1 per page and the page should always have an h1."
+	},
+	"h2 ===": {
+		"scope": "restructuredtext",
+		"prefix": "h2 heading",
+		"body": [
+			"${TM_SELECTED_TEXT:$1}",
+			"===",
+			"$0",
+		],
+		"description": "Heading level 2: Should only proceed an h1."
+	},
+	"h3 ---": {
+		"scope": "restructuredtext",
+		"prefix": "h3 heading",
+		"body": [
+			"${TM_SELECTED_TEXT:$1}",
+			"---",
+			"$0",
+		],
+		"description": "Heading level 3: Should only proceed an h2."
+	},
+	"h4 ~~~": {
+		"scope": "restructuredtext",
+		"prefix": "h4 heading",
+		"body": [
+			"${TM_SELECTED_TEXT:$1}",
+			"~~~",
+			"$0",
+		],
+		"description": "Heading level 4: Should only proceed an h3."
+	},
+	"h5 ***": {
+		"scope": "restructuredtext",
+		"prefix": "h5 heading",
+		"body": [
+			"${TM_SELECTED_TEXT:$1}",
+			"***",
+			"$0",
+		],
+		"description": "Heading level 5: Should only proceed an h4."
+	},
+	"h6 ^^^": {
+		"scope": "restructuredtext",
+		"prefix": "h6 heading",
+		"body": [
+			"${TM_SELECTED_TEXT:$1}",
+			"^^^",
+			"$0",
+		],
+		"description": "Heading Level 6: Should only proceed an h5."
+	},
+
+	// == MARKUPS ==
+
+	"italic": {
+		"scope": "restructuredtext",
+		"prefix": "italic markup",
+		"body": [
+			"*${TM_SELECTED_TEXT:$1}*$0",
+		],
+		"description": "*italic* can be used for emphasis."
+	},
+	"bold": {
+		"scope": "restructuredtext",
+		"prefix": "bold markup",
+		"body": [
+			"**${TM_SELECTED_TEXT:$1}**$0",
+		],
+		"description": "**bold** can be used to define app names and emphasis terms/concepts in bold format."
+	},
+	"literal": {
+		"scope": "restructuredtext",
+		"prefix": "literal markup",
+		"body": [
+			"`${TM_SELECTED_TEXT:$1}`$0",
+		],
+		"description": "`literal` to write a technical term or a specific value to insert."
+	},
+	"dfn": {
+		"scope": "restructuredtext",
+		"prefix": "deffinition markup",
+		"body": [
+			"(:dfn:`${TM_SELECTED_TEXT:$1}`)$0",
+		],
+		"description": "(:dfn:`deffinition`) can be used to define a term."
+	},
+	"abbr": {
+		"scope": "restructuredtext",
+		"prefix": "abbr markup",
+		"body": [
+			":abbr:`${TM_SELECTED_TEXT:$1} ($2)`$0",
+		],
+		"description": ":abbr:`abbr (abbreviation) to write a self-defining abbreviation that is displayed as a tooltip."
+	},
+	"guilabel": {
+		"scope": "restructuredtext",
+		"prefix": "guilabel markup",
+		"body": [
+			":guilabel:`${TM_SELECTED_TEXT:$1}`$0",
+		],
+		"description": ":guilabel:`Label` markup to identify any text of the interactive user interface (e.g., labels)."
+	},
+	"menuselection": {
+		"scope": "restructuredtext",
+		"prefix": "menuselection markup",
+		"body": [
+			":menuselection:`${TM_SELECTED_TEXT:$1} --> $2`$0",
+		],
+		"description": ":menuselection:`Menu Item --> Sub-Menu Item` markup to guide users through a sequence of menus, starting with the app's name."
+	},
+	"file": {
+		"scope": "restructuredtext",
+		"prefix": "file markup",
+		"body": [
+			":file:`${TM_SELECTED_TEXT:$1}`$0",
+		],
+		"description": ":file:`filename.txt` can be used to indicate a file path or name."
+	},
+	"command": {
+		"scope": "restructuredtext",
+		"prefix": "command markup",
+		"body": [
+			":command:`${TM_SELECTED_TEXT:$1}`$0",
+		],
+		"description": ":command:`make html` can be used to indicate a command that should be run in the terminal."
+	},
+	"icon": {
+		"scope": "restructuredtext",
+		"prefix": "icon markup",
+		"body": [
+			":icon:`${1|fa-,oi-|}$0` :guilabel:`($2)` icon",
+		],
+		"description": "Choose between :icon:`fa-icon` or :icon:`oi-icon` to render UI icon."
+	},
+
+	// == Links ==
+
+	"custom anchor": {
+		"scope": "restructuredtext",
+		"prefix": "custom anchor link",
+		"body": [
+			".. _${TM_SELECTED_TEXT:$1}:$0",
+		],
+		"description": ".. _app-name/target-name: can be used to create an anchor for an internal hyperlink."
+	},
+	"ref internal link": {
+		"scope": "restructuredtext",
+		"prefix": "ref internal link",
+		"body": [
+			":ref:`${TM_SELECTED_TEXT:$1label} <custom-anchor$2>`$0",
+		],
+		"description": ":ref:`label <app-name/target-name>` can be used to create an internal hyperlink to an anchor."
+	},
+	"external link": {
+		"scope": "restructuredtext",
+		"prefix": "external link",
+		"body": [
+			"`${TM_SELECTED_TEXT:$1} <$2>`_$0",
+		],
+		"description": "`label <URL>`_ can be used to create an external hyperlink to a URL."
+	},
+	"doc link": {
+		"scope": "restructuredtext",
+		"prefix": "doc documentation link",
+		"body": [
+			":doc:`${TM_SELECTED_TEXT:$1} <$2>`$0",
+		],
+		"description": ":doc:`label <path/to/doc>` can be used to create an internal hyperlink to a document."
+	},
+	"download link": {
+		"scope": "restructuredtext",
+		"prefix": "download link",
+		"body": [
+			":download:`${TM_SELECTED_TEXT:$1} <$2>`$0",
+		],
+		"description": ":download:`label <path/to/file.zip>` markup allows referencing files (that are not necessarily RST documents) within the source tree to be downloaded."
+	},
+
+	// == Images ==
+
+	"image": {
+		"scope": "restructuredtext",
+		"prefix": "image",
+		"body": [
+			".. image:: $TM_FILENAME_BASE/${TM_SELECTED_TEXT:$1}",
+			"   :alt: ${2:Add alt text}.",
+		],
+		"description": ".. image:: path/image.png can be used to insert an image."
+	},
+	"figure": {
+		"scope": "restructuredtext",
+		"prefix": "figure",
+		"body": [
+			".. figure:: $TM_FILENAME_BASE/${TM_SELECTED_TEXT:$1}",
+			"   :alt: ${2:Add alt text}.",
+			"",
+			"   ${3:Add figure description}.",
+		],
+		"description": ".. figure:: path/image.png can be used to insert a figure."
+	},
+
+	// == Admonitions ==
+
+	"seealso": {
+		"scope": "restructuredtext",
+		"prefix": "seealso admonition",
+		"body": [
+			".. seealso::",
+			"   ${TM_SELECTED_TEXT:$1}",
+			"$0",
+		],
+		"description": ".. seealso:: can be used to provide links to additional information that is related to the current topic."
+	},
+	"note": {
+		"scope": "restructuredtext",
+		"prefix": "note admonition",
+		"body": [
+			".. note::",
+			"   ${TM_SELECTED_TEXT:$1}",
+			"$0",
+		],
+		"description": ".. note:: can be used to draw the reader's attention and highlight important additional information."
+	},
+	"tip": {
+		"scope": "restructuredtext",
+		"prefix": "tip admonition",
+		"body": [
+			".. tip::",
+			"   ${TM_SELECTED_TEXT:$1}",
+			"$0",
+		],
+		"description": ".. tip:: can be used to inform the reader about a useful trick that requires an action."
+	},
+	"example": {
+		"scope": "restructuredtext",
+		"prefix": "example admonition",
+		"body": [
+			".. example::",
+			"   ${TM_SELECTED_TEXT:$1}",
+			"$0",
+		],
+		"description": ".. example:: can be used to provide an example of how to use a feature or perform a task."
+	},
+	"exercise": {
+		"scope": "restructuredtext",
+		"prefix": "exercise admonition",
+		"body": [
+			".. exercise::",
+			"   ${TM_SELECTED_TEXT:$1}",
+			"$0",
+		],
+		"description": ".. exercise:: can be used to provide an exercise for the user to complete."
+	},
+	"important": {
+		"scope": "restructuredtext",
+		"prefix": "important admonition",
+		"body": [
+			".. important::",
+			"   ${TM_SELECTED_TEXT:$1}",
+			"$0",
+		],
+		"description": ".. important:: can be used to provide additional information that is important to the user."
+	},
+	"warning": {
+		"scope": "restructuredtext",
+		"prefix": "warning admonition",
+		"body": [
+			".. warning::",
+			"   ${TM_SELECTED_TEXT:$1}",
+			"$0",
+		],
+		"description": ".. warning:: can be used to require the reader to proceed with caution with what is described in the warning."
+	},
+	"danger": {
+		"scope": "restructuredtext",
+		"prefix": "danger admonition",
+		"body": [
+			".. danger::",
+			"   ${TM_SELECTED_TEXT:$1}",
+			"$0",
+		],
+		"description": ".. danger:: can be used to bring the reader's attention to a serious threat."
+	},
+	"spoiler": {
+		"scope": "restructuredtext",
+		"prefix": "spoiler admonition",
+		"body": [
+			".. spoiler:: ${TM_SELECTED_TEXT:$1}",
+			"",
+			"   $2",
+			"$0",
+		],
+		"description": ".. spoiler:: can be used to provide additional information that is hidden from the user."
+	},
+
+	// == Tabs ==
+
+	"tab": {
+		"scope": "restructuredtext",
+		"prefix": "tab",
+		"body": [
+			".. tabs::",
+			"",
+			"   .. tab:: ${TM_SELECTED_TEXT:$1}",
+			"",
+			"   $2",
+			"",
+			"   .. tab:: ${TM_SELECTED_TEXT:$3}",
+			"",
+			"   $4",
+			"$0",
+		],
+		"description": ".. tab:: can be used to create a tabbed interface."
+	},
+	"group tab": {
+		"scope": "restructuredtext",
+		"prefix": "group tab",
+		"body": [
+			".. tabs::",
+			"",
+			"   .. group-tab:: Group1 ${TM_SELECTED_TEXT:$1}",
+			"",
+			"   $2",
+			"",
+			"   .. group-tab:: Group2 ${TM_SELECTED_TEXT:$3}",
+			"",
+			"   $4",
+			"$0",
+		],
+		"description": ".. group-tab:: can be used to create a tabbed interface. Group tabs are special tabs that synchronize based on a group label. The last selected group is remembered and automatically selected when the user returns to the page or visits another page with the tabs group. The group-tab markup is used to define group tabs."
+	},
+	"code tab": {
+		"scope": "restructuredtext",
+		"prefix": "code tab",
+		"body": [
+			".. tabs::",
+			"",
+			"   .. code-tab:: javascript ${TM_SELECTED_TEXT:$1}",
+			"",
+			"   $2",
+			"",
+			"   .. code-tab:: python ${TM_SELECTED_TEXT:$3}",
+			"",
+			"   $4",
+			"$0",
+		],
+		"description": ".. code-tab:: can be used to create a tabbed interface. Code tabs are essentially group tabs that treat the content as a code block. The code-tab markup is used to define a code tab. Just as for the code-block markup, the language defines the syntax highlighting of the tab. If set, the label is used instead of the language for grouping tabs."
+	},
+
+	// == Cards ==
+
+	"card": {
+		"scope": "restructuredtext",
+		"prefix": "card",
+		"body": [
+			".. cards::",
+			"",
+			"   .. card:: ${TM_SELECTED_TEXT:$1}",
+			"      :target: $2",
+			"      :tag: $3",
+			"      :large:",
+			"",
+			"      ${4:description}",
+			"$0",
+		],
+		"description": ".. card:: can be used to create a card to link to another document."
+	},
+
+	// == Tables ==
+
+	"list table": {
+		"scope": "restructuredtext",
+		"prefix": "list table",
+		"body": [
+			".. list-table::",
+			"   :header-rows: 1",
+			"   :stub-columns: 1",
+			"",
+			"   * - Name",
+			"     - Country",
+			"     - Favorite colour",
+			"   * - Raúl",
+			"     - Montenegro",
+			"     - Purple",
+			"   * - Mélanie",
+			"     - France",
+			"     - Turquoise",
+		],
+		"description": "List tables use two-level bulleted lists to convert data into a table. The first level represents the rows and the second level represents the columns."
+	},
+	"grid table": {
+		"scope": "restructuredtext",
+		"prefix": "grid table",
+		"body": [
+			"+-----------------------+--------------+---------------+",
+			"|                       | Shirts       | T-shirts      |",
+			"+=======================+==============+===============+",
+			"| **Available colours** | Purple       | Green         |",
+			"|                       | Turquoise    | Orange        |",
+			"+-----------------------+--------------+---------------+",
+			"| **Sleeves length**    | Long sleeves | Short sleeves |",
+			"+-----------------------+--------------+---------------+",
+		],
+		"description": "Grid tables are made up of cells delimited by pipes (|) and dashes (-). Header rows are defined with (=). https://www.tablesgenerator.com/text_tables"
+	},
+
+	// == Utilities ==
+
+	":replace:": {
+		"scope": "restructuredtext",
+		"prefix": "replace abbreviation shorthand utility",
+		"body": [
+			".. |$1ABBR| replace:: :abbr:`ABBR (Abbreviation)`"
+		],
+		"description": "Create an abbreviation shorthand that is replaced by markup code."
+	},
+	"\\": {
+		"scope": "restructuredtext",
+		"prefix": "escape \\ utility",
+		"body": [
+			"\\",
+		],
+		"description": "Markup symbols escaped with backslashes (\\) are rendered normally. Use this to keep emails and urls from rendering as clickable links. For example: escape\\@example.com."
+	},
+	"|": {
+		"scope": "restructuredtext",
+		"prefix": "break line | utility",
+		"body": [
+			"| $1",
+			"$0",
+		],
+		"description": "Break the line but not the paragraph with a vertical bar (|)."
+	},
+
+	// == Metadata ==
+
+	":show-content:": {
+		"scope": "restructuredtext",
+		"prefix": "show-content metadata",
+		"body": [
+			":show-content:$0",
+		],
+		"description": "Make a toctree page accessible from the navigation menu."
+	},
+	":show-toc:": {
+		"scope": "restructuredtext",
+		"prefix": "show-toc metadata",
+		"body": [
+			":show-toc:$0",
+		],
+		"description": "Show the table of content on a page that has the show-content metadata markup."
+	},
+	":hide-page-toc:": {
+		"scope": "restructuredtext",
+		"prefix": "hide-page-toc metadata",
+		"body": [
+			":hide-page-toc:$0",
+		],
+		"description": "Hide the “On this page” sidebar and use full page width for the content."
+	},
+	":nosearch:": {
+		"scope": "restructuredtext",
+		"prefix": "nosearch metadata",
+		"body": [
+			":nosearch:$0",
+		],
+		"description": "Exclude the document from search results."
+	},
+}
