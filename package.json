@@ -1,14 +1,23 @@
 {
   "name": "odoo-rst-snippets",
-  "displayName": "odoo-rst-snippets",
-  "description": "",
+  "displayName": "Odoo RST Snippets",
+  "description": "Make contributing to Odoo documentation a breeze with `odoo-rst-snippets`. Contains the syntax for all of the RST roles and directives used in the documentation.",
+  "publisher": "samueljlieber",
+  "author": {
+    "name": "Samuel J. Lieber"
+  },
+  "icon": "odoo-rst-snippets-logo.png",
   "version": "0.0.1",
+  "license": "SEE LICENSE IN LICENSE",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/samueljlieber/odoo-rst-snippets.git"
+  },
+  "homepage": "https://github.com/samueljlieber/odoo-rst-snippets/blob/main/README.md",
   "engines": {
     "vscode": "^1.96.0"
   },
-  "categories": [
-    "Snippets"
-  ],
+  "categories": ["Snippets"],
   "contributes": {
     "snippets": [
       {

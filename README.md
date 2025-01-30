@@ -13,6 +13,16 @@ Follows the [RST guidelines and cheat sheet](https://www.odoo.com/documentation/
 - Snippets appear in IntelliSense
 - Supports tab-completion
 
+## Install
+
+Download the latest release of the extension's `.vsix` file from [the repository](https://github.com/samueljlieber/odoo-rst-snippets).
+
+Install the extension on your VS Code by going to **Extensions** > **...** > **Install from VSIX**, and select the extension's `.vsix` file from your downloads.
+
+Or open the VS Code Command Palette and use the **Extensions: Install from VSIX** command.
+
+[More information on installing from a VSIX file](https://code.visualstudio.com/docs/editor/extension-marketplace#_install-from-a-vsix).
+
 ## Requirements
 
 `odoo-rst-snippets` are only valid for editing `.rst` files.
